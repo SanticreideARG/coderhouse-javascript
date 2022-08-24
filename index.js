@@ -1,10 +1,72 @@
+let precio = 0
 
-let numAlumnos = parseInt(prompt("ingresa el numero de alumnos a ingresar al sistema"))
-for(i = 0; i < numAlumnos; i++){
-    let alumno = prompt(`ingresa el nombre del ${i+1}° alumno`)
-    alert(`alumno ${alumno} registrado`)}
-if(numAlumnos > 0){
-    alert(`Lista registrada exitosamente`)}
-else{
-    alert('no se ingresaron alumnos en el sistema')
+//seleccion de destino
+
+let destino = parseInt(prompt("Ingrese el destino al que desee viajar"))
+if(destino == 1){
+    precio =  precio + 35000
+} if(destino == 2){
+    precio = precio + 65000
+} if(destino == 3){
+    precio = precio + 83000
+} if(destino == 4){
+    precio = precio + 91000
+} else{
+    // alert(`Seleccion Incorrecta`)
 }
+if(destino == 1){
+    alert(`Aereos a Sao Pablo - Brasil Ida + Vuelta sin escalas Seleccionados`)
+} if(destino == 2){
+    alert(`Aereos a Nueva York - USA Ida + Vuelta con escala en Sao Pablo Seleccionados`)
+} if(destino == 3){
+    alert(`Aereos a Madrid - España Ida+Vuelta con escala en Sao Pablo Seleccionados`)
+} if(destino == 4){
+    alert(`Aereos a Berlin - Alemania Ida+Vuelta con escala en Sao Pablo y Madrid Seleccionados`)
+}
+
+//seleccion de pasajeros
+
+let pasajeros = parseInt(prompt("Ingrese el numero de pasajeros (maximo 6 por compra)"))
+    if(pasajeros < 7){
+    alert(`Se registraron ${pasajeros} pasajeros para la compra`)
+    }
+    alert(`Comprobando disponibilidad de Pasajes...`)
+    alert(`Asientos disponibles para ${pasajeros} pasajeros en el vuelo elegido`)
+
+//introduccion de codigos de descuento
+
+let descuento = prompt("Ingrese su codigo de descuento (enter en caso omiso)")
+if(descuento == "FLY020"){
+    alert(`Felicidades, usted recibio un descuento del 20% en el precio de su boleto aereo`)
+    descuento = 0.20
+}if(descuento == "FLY010"){
+    alert(`Felicidades, usted recibio un descuento del 10% en el precio de su boleto aereo`)
+    descuento = 0.10
+}if(descuento == "FLY005"){
+    alert(`Felicidades, usted recibio un descuento del 5% en el precio de su boleto aereo`)
+    descuento = 0.05
+}else{
+    alert(`Recuerde registrarse para recibir codigos de descuento para sus viajes!`)
+}
+
+let metodoPago = parseInt(prompt("Ingrese su metodo de pago"))
+if(metodoPago == 1){
+    alert(`Seleccionado Efectivo en puntos de pago o transferencia bancaria`)
+}if(metodoPago == 2){
+    alert(`Seleccionado Tarjeta de Credito Visa Bancaria`)
+}if(metodoPago == 3){
+    alert(`Seleccionado Tarjeta de Credito Mastercard`)}
+    else{alert(Error)}
+
+
+alert(`${precio}`)
+
+// let numAlumnos = parseInt(prompt("ingresa el numero de alumnos a ingresar al sistema"))
+// for(i = 0; i < numAlumnos; i++){
+//     let alumnos = prompt(`ingresa el nombre del ${i+1}° alumno`)
+//     alert(`alumno ${alumnos} registrado`)}
+// if(numAlumnos > 0){
+//     alert(`Lista registrada exitosamente`)}
+// else{
+//     alert('no se ingresaron alumnos en el sistema')
+// }
