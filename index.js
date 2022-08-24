@@ -56,10 +56,22 @@ if(metodoPago == 1){
     alert(`Seleccionado Tarjeta de Credito Visa Bancaria`)
 }if(metodoPago == 3){
     alert(`Seleccionado Tarjeta de Credito Mastercard`)}
-    else{alert(Error)}
+    else{
+        alert(Error)}
 
+    //calculo de precio
+        alert(`Calculando los Costos totales del pasaje`)
+    let iva = precio * 0.21
+    let tasas = precio * 0.7
+    let precioPasaje = (precio-(precio*descuento)+iva+tasas)
+    let precioTotal = precioPasaje*pasajeros
 
-alert(`${precio}`)
+    alert(`Precio Pasaje = $${precio}
+           IVA = $${iva}
+           Tasas = $${tasas}
+           Precio total por Pasaje = $${precioPasaje}
+           Importe total a Pagar (${pasajeros} pasajeros) = $${precioTotal}`)
+
 
 // let numAlumnos = parseInt(prompt("ingresa el numero de alumnos a ingresar al sistema"))
 // for(i = 0; i < numAlumnos; i++){
