@@ -35,16 +35,16 @@ let pasajeros = parseInt(prompt("Ingrese el numero de pasajeros (maximo 6 por co
 
 //introduccion de codigos de descuento
 
-let descuento = prompt("Ingrese su codigo de descuento (enter en caso omiso)")
-if(descuento == "FLY020"){
+let codigoDescuento = prompt("Ingrese su codigo de descuento (enter en caso omiso)")
+if(codigoDescuento == "FLY020"){
     alert(`Felicidades, usted recibio un descuento del 20% en el precio de su boleto aereo`)
-    descuento = 0.20
-}if(descuento == "FLY010"){
+   let descuento = 0.20
+}if(codigoDescuento == "FLY010"){
     alert(`Felicidades, usted recibio un descuento del 10% en el precio de su boleto aereo`)
-    descuento = 0.10
-}if(descuento == "FLY005"){
+    let descuento = 0.10
+}if(codigoDescuento == "FLY005"){
     alert(`Felicidades, usted recibio un descuento del 5% en el precio de su boleto aereo`)
-    descuento = 0.05
+   let descuento = 0.05
 }else{
     alert(`Recuerde registrarse para recibir codigos de descuento para sus viajes!`)
 }
@@ -56,15 +56,17 @@ if(metodoPago == 1){
     alert(`Seleccionado Tarjeta de Credito Visa Bancaria`)
 }if(metodoPago == 3){
     alert(`Seleccionado Tarjeta de Credito Mastercard`)}
-    else{
-        alert(Error)}
 
     //calculo de precio
-        alert(`Calculando los Costos totales del pasaje`)
-    let iva = precio * 0.21
-    let tasas = precio * 0.7
-    let precioPasaje = (precio-(precio*descuento)+iva+tasas)
+    alert(`Calculando los Costos totales del pasaje`)
+
+
+    let iva = precio*0.21
+    let tasas = precio * 0.7    
     let precioTotal = precioPasaje*pasajeros
+    alert(`Espere por favor`)
+
+    let precioPasaje = (precio - (precio*descuento) + iva + tasas)
 
     alert(`Precio Pasaje = $${precio}
            IVA = $${iva}
@@ -72,6 +74,15 @@ if(metodoPago == 1){
            Precio total por Pasaje = $${precioPasaje}
            Importe total a Pagar (${pasajeros} pasajeros) = $${precioTotal}`)
 
+        if(metodoPago == 1){
+            alert(`Los pagos en efectivo solamente se pueden realizar en una cuota.`)
+        }if(metodoPago == 2){
+           let precioCuota = precioTotal / 3
+            alert(`Tarjeta de Credito Visa Bancaria permite hasta 3 cuotas sin interes de $${precioCuota}`)
+        }if(metodoPago == 3){
+            let precioCuota = precioTotal / 6
+            alert(`Tarjeta de Credito Mastercard permite hasta 6 cuotas sin interes de $${precioCuota}`)
+        }
 
 // let numAlumnos = parseInt(prompt("ingresa el numero de alumnos a ingresar al sistema"))
 // for(i = 0; i < numAlumnos; i++){
@@ -81,4 +92,3 @@ if(metodoPago == 1){
 //     alert(`Lista registrada exitosamente`)}
 // else{
 //     alert('no se ingresaron alumnos en el sistema')
-// }
