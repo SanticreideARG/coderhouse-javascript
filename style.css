@@ -1,0 +1,27 @@
+*{
+    font-family: 'Roboto', sans-serif;
+    margin: 5px;
+}
+
+h1{
+    margin-top: 25px
+}
+body{
+    background-color: rgb(248, 180, 101);
+    
+}
+#boardingpass {
+    background-color: rgb(214, 211, 166);
+    font-weight: 700;
+}
+.startingButton{
+    background-color: rgb(60, 255, 21);
+    padding: 7px 25px;
+    margin-bottom: 5px;
+    border: 2px solid black;
+    border-radius: 4px;
+    box-shadow: 2px 3px 3px 2px #474747;
+}
+.secret{
+    color: rgb(83, 81, 49);
+}
