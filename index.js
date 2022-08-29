@@ -19,7 +19,12 @@ function total(){
        }else if(metodoPago == 3){
           alert(`Su pago en con Tarjeta  de Credito Mastercard puede ser procesado en 6 cuotas de $ ${master} por el Total`)
        }
+       document.getElementById("boardingpass").innerHTML = `El total a pagar por ${pasajeros} pasajes es de $ ${resultado}
+       Su bonificacion fue de $ ${discount} 
+       Los impuestos por IVA son de $${iva}`;
+       
   }
+
 
 alert("Ingrese el destino al que desee viajar")
 let destino = parseInt(prompt(`
@@ -30,22 +35,26 @@ let destino = parseInt(prompt(`
 `))
 if(destino == 1){
     precio =  precio + 35000
-    alert(`Aereos a Sao Pablo - Brasil Ida + Vuelta sin escalas Seleccionados`)
 }else if(destino == 2){
     precio = precio + 65000
-    alert(`Aereos a Nueva York - USA Ida + Vuelta con escala en Sao Pablo Seleccionados`)
 }else if(destino == 3){
     precio = precio + 83000
-    alert(`Aereos a Madrid - España Ida + Vuelta con escala en Sao Pablo Seleccionados`)
 }else if(destino == 4){
     precio = precio + 91000
-    alert(`Aereos a Berlin - Alemania Ida + Vuelta con escala en Sao Pablo y Madrid Seleccionados`)
 } else{
     if (destino != [1,2,3,4])
-    alert(`Seleccion incorrecta`)
+    alert(`seleccion incorrecta`)
     return
 }
-
+if(destino == 1){
+    alert(`Aereos a Sao Pablo - Brasil Ida + Vuelta sin escalas Seleccionados`)
+}else if(destino == 2){
+    alert(`Aereos a Nueva York - USA Ida + Vuelta con escala en Sao Pablo Seleccionados`)
+}else if(destino == 3){
+    alert(`Aereos a Madrid - España Ida + Vuelta con escala en Sao Pablo Seleccionados`)
+}else if(destino == 4){
+    alert(`Aereos a Berlin - Alemania Ida + Vuelta con escala en Sao Pablo y Madrid Seleccionados`)
+}
 //seleccion de pasajeros
 let pasajeros = parseInt(prompt("Ingrese el numero de pasajeros (maximo 6 por compra)"))
     if(pasajeros < 7){
@@ -53,7 +62,7 @@ let pasajeros = parseInt(prompt("Ingrese el numero de pasajeros (maximo 6 por co
     alert(`Comprobando disponibilidad de Pasajes...`)
     alert(`Asientos disponibles para ${pasajeros} pasajeros en el vuelo elegido`)
     }
-    if (pasajeros != [1,2,3,4,5,6]){
+    else if (pasajeros != [1,2,3,4,5,6]){
         alert (`Seleccion incorrecta`)
         return
     }
@@ -81,12 +90,10 @@ if(metodoPago == 1){
     alert(`Seleccionado Tarjeta de Credito Visa Bancaria`)
 }else if(metodoPago == 3){
     alert(`Seleccionado Tarjeta de Credito Mastercard`)}
- else if ( metodoPago != [1,2,3]){
+ else if ( metodoPago != [1,2,3], pasajeros != [1,2,3,4,5,6]){
         alert (`Seleccion incorrecta`)
         return
     }
     //calculo de precio
 total()
-
-
 }

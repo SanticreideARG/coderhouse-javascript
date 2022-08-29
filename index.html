@@ -10,7 +10,9 @@
 <body>
     <h1>Bienvenidos a la Plataforma de ventas de Euroviajes</h1>
     <h2>Siga los siguientes pasos para conocer el costo actual de su servicio aereo.</h2>
-    <button onclick="plataformaTickets()">Plataforma de Tickets</button>
+    <button class="startingButton" onclick="plataformaTickets()">Plataforma de Tickets</button>
+    <div id="boardingpass">
+    </div>
     <hr>
     <p>Ingrese el destino al que desee viajar, siendo las opciones las siguientes:</p>
     <ol>
@@ -34,10 +36,20 @@
         FLY010 (10% de descuento) <br>
         FLY020 (20% de descuento)
     </p>
+
     <style>
         h1{margin-top: 25px}
         body{background-color: darkkhaki;}
         *{font-family: 'Roboto', sans-serif;}
+        #boardingpass {
+            background-color: rgb(214, 211, 166);
+            font-weight: 700;
+        }
+        .startingButton{
+            background-color: rgb(119, 231, 97);
+            padding: 7px;
+            border: 2px solid black;
+        }
     </style>
     
     <script src="index.js">
