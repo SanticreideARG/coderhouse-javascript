@@ -1,7 +1,7 @@
+function plataformaTickets(){
 let precio = 0
 let descuento = 0
 //seleccion de destino
-
 function total(){
     let precioBruto = precio*pasajeros
       let discount = precioBruto*descuento
@@ -30,36 +30,34 @@ let destino = parseInt(prompt(`
 `))
 if(destino == 1){
     precio =  precio + 35000
-}else if(destino == 2){
-    precio = precio + 65000
-}else if(destino == 3){
-    precio = precio + 83000
-}else if(destino == 4){
-    precio = precio + 91000
-} else{
-     alert(`Seleccion Incorrecta`)
-}
-if(destino == 1){
     alert(`Aereos a Sao Pablo - Brasil Ida + Vuelta sin escalas Seleccionados`)
 }else if(destino == 2){
+    precio = precio + 65000
     alert(`Aereos a Nueva York - USA Ida + Vuelta con escala en Sao Pablo Seleccionados`)
 }else if(destino == 3){
+    precio = precio + 83000
     alert(`Aereos a Madrid - España Ida + Vuelta con escala en Sao Pablo Seleccionados`)
 }else if(destino == 4){
+    precio = precio + 91000
     alert(`Aereos a Berlin - Alemania Ida + Vuelta con escala en Sao Pablo y Madrid Seleccionados`)
+} else{
+    if (destino != [1,2,3,4])
+    alert(`Seleccion incorrecta`)
+    return
 }
 
 //seleccion de pasajeros
-
 let pasajeros = parseInt(prompt("Ingrese el numero de pasajeros (maximo 6 por compra)"))
     if(pasajeros < 7){
     alert(`Se registraron ${pasajeros} pasajeros para la compra`)
-    }
     alert(`Comprobando disponibilidad de Pasajes...`)
     alert(`Asientos disponibles para ${pasajeros} pasajeros en el vuelo elegido`)
-
+    }
+    if (pasajeros != [1,2,3,4,5,6]){
+        alert (`Seleccion incorrecta`)
+        return
+    }
 //introduccion de codigos de descuento
-
 let codigoDescuento = prompt("Ingrese su codigo de descuento (enter en caso omiso)")
 if(codigoDescuento === "FLY020"){
     alert(`Felicidades, usted recibio un descuento del 20% en el precio de su boleto aereo`)
@@ -73,7 +71,6 @@ if(codigoDescuento === "FLY020"){
 }else{
     alert(`Recuerde registrarse para recibir codigos de descuento para sus viajes!`)
 }
-
 let metodoPago = parseInt(prompt(`Ingrese su metodo de pago:
 1 - Efectivo en puntos de pago o transferencia bancaria
 2 - Tarjeta de Credito Visa
@@ -84,8 +81,12 @@ if(metodoPago == 1){
     alert(`Seleccionado Tarjeta de Credito Visa Bancaria`)
 }else if(metodoPago == 3){
     alert(`Seleccionado Tarjeta de Credito Mastercard`)}
-
+ else if ( metodoPago != [1,2,3]){
+        alert (`Seleccion incorrecta`)
+        return
+    }
     //calculo de precio
-
-
 total()
+
+
+}
