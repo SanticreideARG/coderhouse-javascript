@@ -1,7 +1,10 @@
 function plataformaTickets(){
 let precio = 0
 let descuento = 0
-//seleccion de destino
+
+//funcion calculo de precio
+
+
 function total(){
     let precioBruto = precio*pasajeros
       let discount = precioBruto*descuento
@@ -25,6 +28,7 @@ function total(){
        
   }
 
+//seleccion de destino
 
 alert("Ingrese el destino al que desee viajar")
 let destino = parseInt(prompt(`
@@ -55,7 +59,9 @@ if(destino == 1){
 }else if(destino == 4){
     alert(`Aereos a Berlin - Alemania Ida + Vuelta con escala en Sao Pablo y Madrid Seleccionados`)
 }
+
 //seleccion de pasajeros
+
 let pasajeros = parseInt(prompt("Ingrese el numero de pasajeros (maximo 6 por compra)"))
     if(pasajeros < 7){
     alert(`Se registraron ${pasajeros} pasajeros para la compra`)
@@ -66,7 +72,9 @@ let pasajeros = parseInt(prompt("Ingrese el numero de pasajeros (maximo 6 por co
         alert (`Seleccion incorrecta`)
         return
     }
+
 //introduccion de codigos de descuento
+
 let codigoDescuento = prompt("Ingrese su codigo de descuento (enter en caso omiso)")
 if(codigoDescuento === "FLY020"){
     alert(`Felicidades, usted recibio un descuento del 20% en el precio de su boleto aereo`)
@@ -94,6 +102,8 @@ if(metodoPago == 1){
         alert (`Seleccion incorrecta`)
         return
     }
+
     //calculo de precio
+
 total()
 }

@@ -9,12 +9,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Bienvenidos a la Plataforma de ventas de Euroviajes</h1>
-    <h2>Siga los siguientes pasos para conocer el costo actual de su servicio aereo.</h2>
-    <button class="startingButton" onclick="plataformaTickets()">Plataforma de Tickets</button>
-    <div id="boardingpass">
+    <div class="headingbar">
+    <h1>Euroviajes.Dv</h1>
+    <h2>Plataforma de ventas</h2>
     </div>
-    <hr>
+    <div class="container">
+    <h3>Siga los siguientes pasos para conocer el costo actual de su servicio aereo.</h3>
+    <button class="startingButton" onclick="plataformaTickets()">Plataforma de Tickets</button>
+    <div class="boardingpass" id="boardingpass">
+    </div>
     <p>Ingrese el destino al que desee viajar, siendo las opciones las siguientes:</p>
     <ol>
         <li>Aereos a Sao Pablo - Brasil Ida + Vuelta sin escalas - $35.000 + iva</li>
@@ -35,6 +38,18 @@
         FLY010 (10% de descuento) <br>
         FLY020 (20% de descuento)
     </p>
+    <footer>
+
+    </footer>
+</div>
+<footer id="footer">
+    <div class="inner">
+        <ul class="icons">
+            <li><a rel="noopener noreferrer" target="_blank" href="https://github.com/SanticreideARG" >@github</a></li>
+            <li><a rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/santiago-creide-5311a6116/" >@LinkedIn</a></li>
+        </ul>
+    </div>
+</footer>
     <script src="index.js">    </script>
 </body>
 </html>
