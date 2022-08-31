@@ -10,34 +10,41 @@
 </head>
 <body>
     <div class="headingbar">
-    <h1>Euroviajes.Dv</h1>
-    <h2>Plataforma de ventas</h2>
+    <h1>Pup-Marketplace</h1>
+    <h2>Clasificados Gratis</h2>
     </div>
     <div class="container">
-    <h3>Siga los siguientes pasos para conocer el costo actual de su servicio aereo.</h3>
-    <button class="startingButton" onclick="plataformaTickets()">Plataforma de Tickets</button>
-    <div class="boardingpass" id="boardingpass">
-    </div>
-    <p>Ingrese el destino al que desee viajar, siendo las opciones las siguientes:</p>
-    <ol>
-        <li>Aereos a Sao Pablo - Brasil Ida + Vuelta sin escalas - $35.000 + iva</li>
-        <li>Aereos a Nueva York - USA Ida + Vuelta con escala en Sao Pablo - $65.000 + iva</li>
-        <li>Aereos a Madrid - España Ida+Vuelta con escala en Sao Pablo - $83.000 + iva</li>
-        <li>Aereos a Berlin - Alemania Ida+Vuelta con escala en Sao Pablo y Madrid - $91.000 + iva</li>
-    </ol>
-    <p>Ingrese la cantidad de Pasajeros. <br>Solo se le permitira ingresar un maximo de 6 compras simultaneas.</p>
-    <p>Ingrese su codigo de descuento en caso de tenerlo.</p>
-    <p>Ingrese su metodo de pago, siendo:</p>
-    <ol>
-        <li>Efectivo en puntos de pago o transferencia bancaria</li>
-        <li>Tarjeta de Credito Visa Bancaria (hasta 3 cuotas)</li>
-        <li>Tarjeta de Credito Mastercard (hasta 6 cuotas)</li>
-    </ol>
-    <p class="secret">Pista: Los siguientes codigos de descuento estan disponibles para usted:<br>
-        FLY005 (05% de descuento) <br>
-        FLY010 (10% de descuento) <br>
-        FLY020 (20% de descuento)
-    </p>
+    <h3>Ingresa tus productos!</h3>
+   <form action="newArticle">
+    <label for="user">Nombre Usuario</label>
+    <input type="text" name="user" id="user"> <br>
+    <label for="number">Telefono Celular</label>
+    <input type="number" name="cel" id="cel"> <br>
+    <label for="categoria">Categoria</label>
+    <select name="categoria" id="categoria" form="categoria">
+     <option value="rodados">Autos, Motos y otros Rodados</option>
+     <option value="electronica">Electronica y Tecnologia</option>
+     <option value="electrodomesticos">Electrodomesticos</option>
+     <option value="herramientas">Herramientas y Construccion</option>
+     <option value="deportes">Equipos Deportivos y de Acampe</option>
+</select><br>
+<label for="condicion">Condicion</label>
+<select name="condicion" id="condicion" form="condicion">
+    <option value="nuevo">Nuevo</option>
+    <option value="usado">Usado</option>
+    <option value="liquidacion">Liquidaciones, Remates o Defectuosos</option>
+</select><br>
+<label for="productName">Titulo Producto</label>
+<input type="text" name="user" id="user"> <br>
+<label for="price">Precio</label>
+<input type="number" name="price" id="price" pattern="[0-9]*" inputmode="numeric"> <br>
+<label for="description">Descripcion</label>
+<input type="text" size = "80" width="40px" id="mensaje" rows="6" maxlength="1500" placeholder="Descripcion">
+</input><br>  <label for="img">Select image:</label>
+<input type="file" id="img" name="img" accept="image/*">
+
+   </form>
+     <button class="startingButton" onclick="ingresarArticulo()">Ingrese su articulo</button>
     <footer>
 
     </footer>

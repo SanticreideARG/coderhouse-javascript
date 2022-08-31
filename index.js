@@ -1,109 +1,28 @@
-function plataformaTickets(){
-let precio = 0
-let descuento = 0
-
-//funcion calculo de precio
-
-
-function total(){
-    let precioBruto = precio*pasajeros
-      let discount = precioBruto*descuento
-      let iva = precioBruto*0.21
-       let resultado = precioBruto-discount+iva
-       let visa = resultado/3
-       let master = resultado/6
-       alert(`El total a pagar por ${pasajeros} pasajes es de $ ${resultado}
-       Su bonificacion fue de $ ${discount} 
-       Los impuestos por IVA son de $${iva}`)
-       if(metodoPago == 1){
-          alert(`Su pago en efectivo debe ser en una sola cuota de $ ${resultado} por el Total`)
-       }else if(metodoPago == 2){
-          alert(`Su pago en con Tarjeta  de Credito Visa puede ser procesado en 3 cuotas de $ ${visa} por el Total`)
-       }else if(metodoPago == 3){
-          alert(`Su pago en con Tarjeta  de Credito Mastercard puede ser procesado en 6 cuotas de $ ${master} por el Total`)
-       }
-       document.getElementById("boardingpass").innerHTML = `El total a pagar por ${pasajeros} pasajes es de $ ${resultado}
-       Su bonificacion fue de $ ${discount} 
-       Los impuestos por IVA son de $${iva}`;
-       
-  }
-
-//seleccion de destino
-
-alert("Ingrese el destino al que desee viajar")
-let destino = parseInt(prompt(`
-1 - Aereos a Sao Pablo - Brasil Ida + Vuelta
-2 - Aereos a Nueva York - USA Ida + Vuelta
-3 - Aereos a Madrid - España Ida + Vuelta
-4 - Aereos a Berlin - Alemania Ida + Vuelta
-`))
-if(destino == 1){
-    precio =  precio + 35000
-}else if(destino == 2){
-    precio = precio + 65000
-}else if(destino == 3){
-    precio = precio + 83000
-}else if(destino == 4){
-    precio = precio + 91000
-} else{
-    if (destino != [1,2,3,4])
-    alert(`seleccion incorrecta`)
-    return
-}
-if(destino == 1){
-    alert(`Aereos a Sao Pablo - Brasil Ida + Vuelta sin escalas Seleccionados`)
-}else if(destino == 2){
-    alert(`Aereos a Nueva York - USA Ida + Vuelta con escala en Sao Pablo Seleccionados`)
-}else if(destino == 3){
-    alert(`Aereos a Madrid - España Ida + Vuelta con escala en Sao Pablo Seleccionados`)
-}else if(destino == 4){
-    alert(`Aereos a Berlin - Alemania Ida + Vuelta con escala en Sao Pablo y Madrid Seleccionados`)
-}
-
-//seleccion de pasajeros
-
-let pasajeros = parseInt(prompt("Ingrese el numero de pasajeros (maximo 6 por compra)"))
-    if(pasajeros < 7){
-    alert(`Se registraron ${pasajeros} pasajeros para la compra`)
-    alert(`Comprobando disponibilidad de Pasajes...`)
-    alert(`Asientos disponibles para ${pasajeros} pasajeros en el vuelo elegido`)
+class Articulo{
+    constructor(user, number, categoria, condicion, productName, price, description){
+        this.user = user;
+        this.number = number;
+        this.categoria = categoria;
+        this.condicion = condicion;
+        this.productName = productName;
+        this.price = price;
+        this.description = description;
     }
-    else if (pasajeros != [1,2,3,4,5,6]){
-        alert (`Seleccion incorrecta`)
-        return
+        //articleShow
     }
+   let articulo1 = new Articulo("Jose", 299445533, 2, 2, "Motorola g20", 21000, "Usado, excelente estado.")
+   let articulo2 = new Articulo("Marcos", 299455231, 1, 2, "Fiat Punto", 6000000, "Usado, Unico dueño digno dever.")
+   let articulo3 = new Articulo("Patricia", 297245599, 4, 1, "Taladro Percutor Dewalt", 32000, "Vendo Taladro Portatil Dewalt Nuevo")
+    console.log(articulo1, articulo2, articulo3)
 
-//introduccion de codigos de descuento
-
-let codigoDescuento = prompt("Ingrese su codigo de descuento (enter en caso omiso)")
-if(codigoDescuento === "FLY020"){
-    alert(`Felicidades, usted recibio un descuento del 20% en el precio de su boleto aereo`)
- descuento = 0.05
-}else if(codigoDescuento === "FLY010"){
-    alert(`Felicidades, usted recibio un descuento del 10% en el precio de su boleto aereo`)
- descuento = 0.1
-}else if(codigoDescuento === "FLY005"){
-    alert(`Felicidades, usted recibio un descuento del 5% en el precio de su boleto aereo`)
- descuento = 0.2
-}else{
-    alert(`Recuerde registrarse para recibir codigos de descuento para sus viajes!`)
-}
-let metodoPago = parseInt(prompt(`Ingrese su metodo de pago:
-1 - Efectivo en puntos de pago o transferencia bancaria
-2 - Tarjeta de Credito Visa
-3 - Tarjeta de Credito Mastercard`))
-if(metodoPago == 1){
-    alert(`Seleccionado Efectivo en puntos de pago o transferencia bancaria`)
-}else if(metodoPago == 2){
-    alert(`Seleccionado Tarjeta de Credito Visa Bancaria`)
-}else if(metodoPago == 3){
-    alert(`Seleccionado Tarjeta de Credito Mastercard`)}
- else if ( metodoPago != [1,2,3], pasajeros != [1,2,3,4,5,6]){
-        alert (`Seleccion incorrecta`)
-        return
-    }
-
-    //calculo de precio
-
-total()
+function ingresarArticulo(){
+    let user = document.getElementById(user).value;
+    let number = document.getElementById(number).value;
+    let categoria = document.getElementById(categoria).value;
+    let condicion = document.getElementById(condicion).value;
+    let productName = document.getElementById(productName).value;
+    let price = document.getElementById(price).value;
+    let description = document.getElementById(description).value;
+    let articulo4 = new Articulo(user, number, categoria, condicion, productName, price, description)
+    console.log(articulo4)
 }
