@@ -9,14 +9,10 @@ body{
     background-color: #c7efff;
     margin: 0;
 }
-.boardingpass {
-    background-color: rgb(214, 211, 166);
-    font-weight: 700;
-}
 .startingButton{
     font-family: 'Roboto', sans-serif;
     background-color: rgb(60, 255, 21); 
-    display: table;
+    display: inline-block;
     padding: 7px 25px;
     margin: 15px 16%;
     border: 2px solid black;
@@ -25,9 +21,6 @@ body{
 }
 .startingButton:hover{
     background-color: rgb(28, 85, 17); 
-}
-.secret{
-    color: rgb(32, 32, 24);
 }
 h2{
     font-size: 20px;
@@ -62,23 +55,9 @@ h3{
         margin: 5px;
         border: 3px solid #000000;
         border-radius: 4px; 
+        text-align: center;
     }
-    .cards:first-child{
-        margin-top: 60px;
-    }
-footer {
-    background: linear-gradient(#0c3444, #242e49);        
-    color: #fff;
-     }
-    footer ul{
-            list-style: none;
-    }
-    footer a {
-          color: #005d81;
-          font-family: 'Roboto', Courier, monospace;
-          font-size: 1.1em;
-          font-weight: bolder;
-        }      
+    
         select{border-color:#000000; 
             border-style:solid; 
             font-size:19px; 
@@ -115,6 +94,10 @@ footer {
             flex-direction: column;
         }
         .startingButton{
-            margin: auto;
+            margin: 24px auto;
         }
+    }
+    .side-container{
+        display: grid;
+        grid-template-columns: 50% 50%;
     }
