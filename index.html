@@ -13,6 +13,7 @@
     <h1>Daily Marketplace</h1>
     <h2>Clasificados Gratis</h2>
 </div>
+<main>  
 <div class="container">
     <div class="side-container">
         <div id="card1" class="cards">
@@ -63,7 +64,7 @@
             <p id="card8description"></p>
             <p id="card8user"></p>
         </div>
-        <form action="get">
+        <form name="myForm" onsubmit="return validateForm()" method="post">
            <label for="title">Titulo de Publicacion</label> <input type="text" name="title" id="title" required>
            <label for="price">Precio</label> <input type="number" name="price" id="price" required>
            <label for="info">Descripcion</label> <input type="text" name="info" id="info">
@@ -73,6 +74,10 @@
 
     </div>
 </div>
+</main>
+<footer>
+    <p>hecho con fines educativos para coderhouse</p>
+</footer>
     <script src="index.js">    </script>
 </body>
 </html>

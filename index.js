@@ -2,8 +2,35 @@ let articleNames = ["Pc Gamer", "PS5", "Xbox One", "Silla Pc", "Home Theatre Mut
 let articlePrices = [120000,  210000, 95000, 24000, 49999, 24000, 250000, 100000]
 let articleUsers = ["Marcos", "Pablo", "Jose", "Lorena", "Miguel", "Andy", "Patricia", "Julian"]
 let articleDescription = ["Vendo PC AMD Ryzen 5 8gb Ram GeForce RTX 2080Ti", "Vendo Sony PS5 con 4 juegos y dos Joysticks", "Vendo Xbox One solo un mando", "Vendo Silla PC noganet excelente estado llevo a domicilio", "Home theatre muteki incluye su control remoto", "guitarra segunda mano tambien vendo amplificador consultar", "bicicleta mtb 10v horquilla fox excelente estado", "Tv 42 pulgadas exelente estado igual a nuevo escucho ofertas."]
-function crearArticulos(){
-    //Crear articulos se encarga de imprimir los Arrays actuales sobre cada Card en el Documento,
+
+function addItem(){
+    if (document.getElementById('title').value != 0 && document.getElementById('price').value != 0  ){
+    let art1 = newArticle();}
+    //addItem verifica que el titulo y el precio esten detallados para evitar ingresar arrays vacios.
+}
+function newArticle(){
+    let nombre = document.getElementById('title').value;
+    articleNames.shift();
+    articleNames.push(nombre);
+    let precio =  document.getElementById('price').value;
+    articlePrices.push(precio);
+    articlePrices.shift();
+    let user =   document.getElementById('name').value;
+    articleUsers.push(user);
+    articleUsers.shift();
+    let description =   document.getElementById('info').value;
+    articleDescription.push(description);
+    articleDescription.shift();
+    console.log(articleNames);
+    console.log(articlePrices);
+    console.log(articleUsers);
+    console.log(articleDescription);
+    //articleGenerator actualiza la lista de articulos luego de ingresar los nuevos valores a los arrays
+    articleGenerator()
+
+}
+function articleGenerator(){
+    //articleGenerator se encarga de imprimir los Arrays actuales sobre cada Card en el Documento,
     // o actualizarlas segun sea necesario.
     document.getElementById("card1title").innerHTML = `${articleNames[0]}`;
     document.getElementById("card1price").innerHTML = `$${articlePrices[0]}`;
@@ -39,54 +66,5 @@ function crearArticulos(){
     document.getElementById("card8description").innerHTML = `${articleDescription[7]}`;
 }
 
-function addItem(){
-    let art1 = nuevoArticulo();
-}
-function nuevoArticulo(){
-    let nombre = document.getElementById('title').value;
-    if(nombre != undefined){
-    articleNames.shift();
-    articleNames.push(nombre);
-    }   else if(nombre == ''){
-    return
-    }
-    let precio =  document.getElementById('price').value;
-    if(precio != NaN){
-    articlePrices.push(precio);
-    articlePrices.shift();
-    }   else if(precio == NaN){
-    return
-    }
-    let user =   document.getElementById('name').value;
-    if(user != undefined){
-    articleUsers.push(user);
-    articleUsers.shift();
-    }   else if(user == ''){
-    return
-    }
-    let description =   document.getElementById('info').value;
-    if(description != undefined){
-    articleDescription.push(description);
-    articleDescription.shift();
-    }
-
-    console.log(articleNames);
-    console.log(articlePrices);
-    console.log(articleUsers);
-    console.log(articleDescription);
-
-
-    crearArticulos()
-
-
-}
-function validateForm() {
-    let x = document.forms["myForm"]["fname"].value;
-    if (x == "") {
-      alert("Name must be filled out");
-      return false;
-    }
-  }
-
-//crear Articulos se inicializa con los articulos, y se actualiza nuevamente con los valores que ingresa addItem
-crearArticulos()
+//articleGenerator se inicializa con los articulos, y se actualiza nuevamente con los valores que ingresa addItem
+articleGenerator()
