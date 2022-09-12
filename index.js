@@ -1,17 +1,7 @@
 
-function showChart(){
-    let chartShower = document.createElement("div");
-    chartShower.className = "chartShower";
-    chartShower.innerHTML = `$${total}<br>
-                            ${totalItems} items en el carrito`
-    chart.append(chartShower)
-}
 function refreshChart(){
-    let chartShower = document.createElement("div");
-    chartShower.className = "chartShower";
     chartShower.innerHTML = `$${total}<br>
-                            ${totalItems} items en el carrito`
-    chart.append(chartShower)
+    ${totalItems} items en el carrito`
 }
 
 
@@ -84,6 +74,9 @@ let contenedor = document.getElementById("cardContainer")
 let total = 0
 let totalItems = 0
 let chart = document.getElementById('chart')
-
-showChart();
+let chartShower = document.createElement("div");
+chartShower.className = "chartShower";
+chartShower.innerHTML = `$${total}<br>
+                         ${totalItems} items en el carrito`
+chart.append(chartShower)
 articleGenerator();
