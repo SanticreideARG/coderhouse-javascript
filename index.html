@@ -15,55 +15,10 @@
 </div>
 <main>  
 <div class="container">
+    <div id="cardContainer" class="cardContainer">
+    </div>
     <div class="side-container">
-        <div id="card1" class="cards">
-            <h2 id="card1title"></h2>
-            <p id="card1price"></p>
-            <p id="card1description"></p>
-            <p id="card1user"></p>
-        </div>
-        <div id="card2" class="cards">
-            <h2 id="card2title"></h2>
-            <p id="card2price"></p>
-            <p id="card2description"></p>
-            <p id="card2user"></p>
-        </div>
-        <div id="card3" class="cards">
-            <h2 id="card3title"></h2>
-            <p id="card3price"></p>
-            <p id="card3description"></p>
-            <p id="card3user"></p>
-        </div>
-        <div id="card4" class="cards">
-            <h2 id="card4title"></h2>
-            <p id="card4price"></p>
-            <p id="card4description"></p>
-            <p id="card4user"></p>
-        </div>
-        <div id="card5" class="cards">
-            <h2 id="card5title"></h2>
-            <p id="card5price"></p>
-            <p id="card5description"></p>
-            <p id="card5user"></p>
-        </div>
-        <div id="card6" class="cards">
-            <h2 id="card6title"></h2>
-            <p id="card6price"></p>
-            <p id="card6description"></p>
-            <p id="card6user"></p>
-        </div>
-        <div id="card7" class="cards">
-            <h2 id="card7title"></h2>
-            <p id="card7price"></p>
-            <p id="card7description"></p>
-            <p id="card7user"></p>
-        </div>
-        <div id="card8" class="cards">
-            <h2 id="card8title"></h2>
-            <p id="card8price"></p>
-            <p id="card8description"></p>
-            <p id="card8user"></p>
-        </div>
+  
         <form name="myForm" onsubmit="return validateForm()" method="post">
            <label for="title">Titulo de Publicacion</label> <input type="text" name="title" id="title" required>
            <label for="price">Precio</label> <input type="number" name="price" id="price" required>
@@ -73,6 +28,7 @@
         <button class="startingButton" onclick="addItem()">Ingrese su articulo</button>
 
     </div>
+
 </div>
 </main>
 <footer>

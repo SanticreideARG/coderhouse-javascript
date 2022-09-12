@@ -6,8 +6,20 @@
     padding: 5;}
 
 body{
-    background-color: #c7efff;
+    background-color: #e9e9e9;
     margin: 0;
+}
+.btn{
+    
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(60, 255, 21); 
+    display: inline-block;
+    padding: 7px 25px;
+    margin: 15px 16%;
+    border: 2px solid black;
+    border-radius: 4px;
+    font-weight: 900;
+    box-shadow: 2px 3px 3px 2px #222222;
 }
 .startingButton{
     font-family: 'Roboto', sans-serif;
@@ -18,7 +30,7 @@ body{
     border: 2px solid black;
     border-radius: 4px;
     font-weight: 900;
-    box-shadow: 2px 3px 3px 2px #000000;
+    box-shadow: 2px 3px 3px 2px #222222;
 }
 .startingButton:hover{
     background-color: rgb(28, 85, 17); 
@@ -33,6 +45,8 @@ h3{
     background: #006eff;
     background: linear-gradient(90deg, rgb(0, 217, 255) 0%, rgb(0, 47, 255) 100%); 
     border-bottom: 3px solid #000000;
+        box-shadow: 2px 3px 3px 2px #222222;
+
 }
     .headingbar h1 {
       font-family: 'Roboto', Courier, monospace;
@@ -52,24 +66,40 @@ h3{
     padding-bottom: 122px;
     }
 .cards{
-        padding: 15px;
-        background-color: #006eff;
+        padding: 10px;
+        background-color: #7bb4ff;
+        width: 80%;
         margin: 5px;
-        border: 3px solid #000000;
+        border: 2px solid #292929;
         border-radius: 4px; 
         text-align: center;
+        box-shadow: 2px 3px 3px 2px #222222;
+
     }
     .side-container{
         display: grid;
         grid-template-columns: 50% 50%;
     }
-.card8title{
+    .cardContainer{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        padding: 35px 0;
+    }
+.cardtitle{
     font-weight: 800;
 }
-.card8price{
+.cardprice{
+    font-weight: 800;
+    font-size: 22px;
+    color: #000000; }
 
-    padding:3px; 
-    background-color:#92dbd2; }
+.card-img{
+    width: 90%;
+    margin: 5px;
+    border: 3px solid #000000;
+    border-radius: 4px;
+    box-shadow: 2px 3px 3px 2px #222222;
+}
 
 select{
     order-color:#000000; 
@@ -87,8 +117,12 @@ input { border-color:#000000;
             font-size:19px; 
             border-radius:11px; 
             border-width:5px; 
-            padding:2px; background-color:#92dbd2; text-shadow:1px 0px 0px rgba(42,42,42,.58);
-            margin: 2px;  }
+            padding:2px; 
+            background-color:#92dbd2; 
+            text-shadow:1px 0px 0px rgba(42,42,42,.58);
+            margin: 2px;
+            box-shadow: 2px 3px 3px 2px #000000;
+ }
 input:focus { outline:none; } 
 
 h3{
@@ -96,12 +130,14 @@ h3{
         }
 form{
             margin-left: 5%;
-            display: grid;
-            grid-template-columns: 65%;
+            display: flex;
+            flex-direction: column;
             margin: 5px;
         }
     footer{
         background-color: #006eff;
+        border: 2px solid black;
+
     }
 /* mediaquerries */
  @media (max-width: 768px) {
@@ -109,7 +145,13 @@ form{
             display: flex;
             flex-direction: column;
         }
+        .cardContainer{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 35px 0;
+    }
     .startingButton{
             margin: 15px auto;
         }
+
     }
