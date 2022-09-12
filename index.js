@@ -13,20 +13,7 @@ function refreshChart(){
                             ${totalItems} items en el carrito`
     chart.append(chartShower)
 }
-function addItem(){
-    if (document.getElementById('title').value != 0 && document.getElementById('price').value != 0  ){
-    let art1 = newArticle();}
-    //addItem verifica que el titulo y el precio esten detallados para evitar ingresar arrays vacios.
-}
-function newArticle(){
-    let nombre = document.getElementById('title').value;
-    let precio =  document.getElementById('price').value;
-    let user =   document.getElementById('name').value;
-    let description =   document.getElementById('info').value;
 
-    articleGenerator()
-
-}
 
 function articleGenerator(){
     for (const producto of productos) {
@@ -44,7 +31,7 @@ function articleGenerator(){
 }
 
 function addChart(id){
-    alert(`agregado producto ${id}`)
+    alert(`Agregado producto ${productos[id].nombre} al carrito de compras`)
     total = total + productos[id].precio
     totalItems = totalItems+1
     alert(`total ${total}`)
