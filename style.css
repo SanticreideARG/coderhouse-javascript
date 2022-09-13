@@ -228,7 +228,7 @@ form{
         margin-left: 9px;
     }
     .cards{
-        grid-template-rows: 1fr 1fr 1fr 1fr 3fr 1fr;
+        grid-template-rows: 0.4fr 1fr 0.4fr 0.4fr 1.3fr 0.3fr;
     }
 
     }
