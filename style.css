@@ -189,6 +189,14 @@ form{
         padding: 4px;
     } 
 /* mediaquerries */
+ @media (max-width: 1080px){
+    .cardContainer{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+                }
+        form input{
+            height: 25px;
+    }
+ }
  @media (max-width: 768px) {
     .container{
             display: flex;
@@ -202,5 +210,11 @@ form{
     .startingButton{
             margin: 15px auto;
         }
-
+    form {
+        display: none;
+    }
+    .bar-logo{
+        margin-top: 9px;
+        margin-left: 9px;
+    }
     }
