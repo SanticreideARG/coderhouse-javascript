@@ -14,7 +14,7 @@ function articleGenerator(){
                                 <p class="cardprice">$ ${producto.precio}</p>
                                 <p class="cardCategory">Categoria: ${producto.categoria}</p>
                                 <button class="btn" id="button${producto.id}" 
-                                onclick="addCart(${producto.id})">Agregar al Carrito</button>
+                                onclick="addCart(${producto.id})">Agregar<img src="./assets/cart2.png" class="blackcart"></button>
                                 `;
         contenedor.append(div);}
 
@@ -27,6 +27,7 @@ function addCart(id){
     alert(`total ${total}`)
     alert(`total de items en carrito ${totalItems}`)
     refreshCart();
+
 }
 
 //lista de productos
