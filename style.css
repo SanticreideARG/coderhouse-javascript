@@ -124,7 +124,7 @@ h3{
     font-weight: 800;
     font-size: 22px;
     color: #1b1b1b;
-    border: 2px solid rgb(75, 255, 156)9);
+    border: 2px solid rgb(75, 255, 156);
     border-radius: 4px;
     background-color: rgb(153, 255, 199);
     box-shadow: 2px 3px 3px 2px #919191;
@@ -222,7 +222,7 @@ form{
         display: none;
     }
     .bar-logo{
-        margin-top: 9px;
+        margin-top: 19px;
         margin-left: 9px;
     }
     }
