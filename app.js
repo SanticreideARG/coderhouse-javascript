@@ -21,35 +21,26 @@ const articleGenerator = (productos) =>{
         })
     })
 }
+
 function addCart(id){
     alert(`Agregado ${productos[id].nombre} al carrito de compras`)
     total = total + productos[id].precio
     totalItems = totalItems+1
-    alert(`total ${total}`)
-    alert(`total de items en carrito ${totalItems}`)
     refreshCart();
+    alert(`total ${total}`)
+    const div = document.createElement("div");
+    div.className = "shopItem";
+    div.innerHTML = `<p>${ productos[id].nombre} /$ ${ productos[id].precio}</p>  <button id="delete${productos[id].id}" class="delete-btn">X</button>`    
+    carrito.appendChild(div);
+
 }
 
 function refreshCart(){
     cartShower.innerHTML = `$${total}<br>
     ${totalItems} items en el carrito`
 }
-const carritoDeCompras = []
 
-const carritoIndex = (productoId)=>{
-    const  contenedorCarrito = document.getElementById("carrito-contenedor")
-    const renderProductosCarrito = ()=> {
-        let producto = productos.find( producto => producto.id == productoId )
-        carritoDeCompras.push(producto)
-        producto.cantidad = 1
-        let div = document.createElement("div")
-        div.classList.add("productoEnCarrito")
-        div.innerHTML = `<p>${producto.nombre}</p>
-                        <p>Precio: ${producto.precio}</p>
-                        <p>Cantidad: ${producto.cantidad}</p> 
-                        <button id="eliminar${producto.id}" class="boton-eliminar"><i class="fa-solid fa-trash-can"></i></button>`
-    }
-}
+
 
 let total = 0
 let totalItems = 0
@@ -60,4 +51,4 @@ cartShower.innerHTML = `$${total}<br>
                          ${totalItems} items en el carrito`
 cart.append(cartShower)
 articleGenerator(productos);
-let cartIcon = document.getElementById(`cartIcon`)
+const carrito = document.getElementById("carrito-contenedor")

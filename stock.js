@@ -225,6 +225,14 @@ const productos = [
       "Te presentamos Major IV, los auriculares emblemáticos de Marshall que ofrecen más de 80 horas de reproducción inalámbrica, carga inalámbrica y un nuevo y mejorado diseño ergonómico.",
   },
   {
+    id: 28,
+    nombre: "Smart TV Teedge Teled 32FH6 LED",
+    precio: 43999,
+    categoria: "Electronica/Gaming",
+    descripcion:
+    "Con el Smart TV Teled 42FH6 vas a acceder a las aplicaciones en las que se encuentran tus contenidos favoritos. Además, podés navegar por Internet, interactuar en redes sociales y divertirte con videojuegos.",
+  },
+  {
     id: 29,
     nombre: "Kit Streaming Microfono celular Tripode Luz",
     precio: 6879,

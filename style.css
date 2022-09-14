@@ -208,9 +208,30 @@ footer {
     font-size: 30px;
     padding: 4px;
 }
-
-
-
+.carritoBarra{
+    margin: 0;
+    padding: 0;
+}
+.shopItem{
+    background-color: #29ca52;
+    font-family: 'Anek Malayalam';
+    font-size: 22px;
+    color: #1b1b1b;
+    border: 2px solid #1b1b1b;
+    border-radius: 4px;
+    margin: 0;
+    display: flex;
+    width: 100%;
+}
+.delete-btn{
+    
+    font-family: 'Anek Malayalam', sans-serif;
+    font-size: 14px;
+    background-color: #d10e0e;
+    padding: 3px 5px;
+    border: 1px solid black;
+    border-radius: 2px;
+}
 /* mediaquerries */
 
 

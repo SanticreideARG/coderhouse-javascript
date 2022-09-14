@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lime Shop</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./fontawesome-all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -32,19 +33,20 @@
         </div>
     </div>
     <main>
+        <div id="carrito-contenedor" class="carrito-contenedor">
+        </div>
         <div class="container">
             <form class="filters" id="filters">
                <div  class="filters-items"><label for="Electronica/Gaming">Electronica/Gaming</label><input type="checkbox" class="check" name="Electronica/Gaming" id="1" checked></div>
                <div  class="filters-items"><label for="Belleza y Cuidado Personal">Belleza y Cuidado Personal</label><input type="checkbox" class="check" name="Belleza y Cuidado Personal" id="2" checked></div>
                <div  class="filters-items"><label for="Electrodomesticos">Electrodomesticos</label><input type="checkbox" class="check" name="Electrodomesticos" id="3" checked></div>
                <div  class="filters-items"<label for="Deportes">Deportes</label><input type="checkbox" class="check" name="Deportes" id="4" checked></div>
-
             </form>
             <div id="cardContainer" class="cardContainer">
                 <!-- las cards van aqui -->
             </div>
         </div>
-        <div id="carrito-contenedor" class="carrito-contenedor"></div>
+
     </main>
     <footer>
         <p>Hecho con fines educativos para coderhouse</p>
@@ -52,7 +54,6 @@
     <script src="stock.js">    </script>
     <script src="app.js">    </script>
 </body>
-
 </html>
     <!-- <div class="side-container">
         <form name="myForm" onsubmit="return validateForm()" method="post">
