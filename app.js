@@ -22,15 +22,12 @@ const articleGenerator = (productos) =>{
     })
 }
 function addCart(id){
-    let carrito = []
     alert(`Agregado ${productos[id].nombre} al carrito de compras`)
     total = total + productos[id].precio
     totalItems = totalItems+1
     alert(`total ${total}`)
     alert(`total de items en carrito ${totalItems}`)
     refreshCart();
-    carrito.push([id])
-    console.log(carrito)
 }
 
 function refreshCart(){

@@ -14,6 +14,10 @@ body {
     margin: 0;
 }
 
+.display-none{
+    display: none;
+}
+
 .btn {
     font-family: 'Anek Malayalam', sans-serif;
     font-size: 17px;
@@ -84,7 +88,10 @@ h3 {
     color: #021300;
     padding-bottom: 5px;
 }
-
+.search-bar{
+    margin: 5px;
+    margin-top: 25px;
+}
 .cartShower {
     font-family: 'Roboto', Courier, monospace;
     font-size: 20px;
@@ -184,7 +191,7 @@ h3 {
 .filters-items{
     margin: 4px;
 }
-
+form checked
 form {
     margin: auto 10px;
 }
