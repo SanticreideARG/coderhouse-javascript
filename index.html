@@ -18,7 +18,7 @@
             </div>
             <div class="letters-logo">
                 <h1>Lime Shop</h1>
-                <h2>Envios gratis a todo el pais</h2>
+                <h2>Envios gratis a toda Argentina</h2>
             </div>
         </div>
         <div class="barmenu">
@@ -33,14 +33,24 @@
     </div>
     <main>
         <div class="container">
+            <form class="filters" id="filters">
+               <div  class="filters-items"><label for="Electronica/Gaming">Electronica/Gaming</label><input type="checkbox" class="check" name="Electronica/Gaming" id="1" checked></div>
+               <div  class="filters-items"><label for="Belleza y Cuidado Personal">Belleza y Cuidado Personal</label><input type="checkbox" class="check" name="Belleza y Cuidado Personal" id="2" checked></div>
+               <div  class="filters-items"><label for="Electrodomesticos">Electrodomesticos</label><input type="checkbox" class="check" name="Electrodomesticos" id="3" checked></div>
+               <div  class="filters-items"<label for="Deportes">Deportes</label><input type="checkbox" class="check" name="Deportes" id="4" checked></div>
+
+            </form>
             <div id="cardContainer" class="cardContainer">
+                <!-- las cards van aqui -->
             </div>
         </div>
+        <div id="carrito-contenedor" class="carrito-contenedor"></div>
     </main>
     <footer>
         <p>Hecho con fines educativos para coderhouse</p>
     </footer>
-    <script src="index.js">    </script>
+    <script src="stock.js">    </script>
+    <script src="app.js">    </script>
 </body>
 
 </html>
