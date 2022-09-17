@@ -1,10 +1,11 @@
-const articleGenerator = (productos) =>{
-    const contenedor = document.getElementById("cardContainer")
+//Renderizador de Tarjetas
 
-    productos.forEach(producto =>{
-        const div = document.createElement("div");
-        div.className = "cards";
-        div.innerHTML = `<h4 class="cardtitle">${producto.nombre}</h4>
+const articleGenerator = (productos) => {
+  const contenedor = document.getElementById("cardContainer");
+  productos.forEach((producto) => {
+    const div = document.createElement("div");
+    div.className = "cards";
+    div.innerHTML = `<h4 class="cardtitle">${producto.nombre}</h4>
                         <img src="./assets/img/img${producto.id}.jpg" class="card-img">
                                 <p class="cardprice">$ ${producto.precio}</p>
                                 <p class="cardCategory">Categoria:<br> ${producto.categoria}</p>
@@ -13,42 +14,62 @@ const articleGenerator = (productos) =>{
                                 ">Agregar
                                 <img src="./assets/cart2.png" class="blackcart">
                                 </button>`;
-        contenedor.appendChild(div);
+    contenedor.appendChild(div);
 
-        const boton = document.getElementById(`button${producto.id}`)
-        boton.addEventListener('click', ()=> {
-            addCart(producto.id)
-        })
-    })
-}
+    const boton = document.getElementById(`button${producto.id}`);
+    boton.addEventListener("click", () => {
+      addCart(producto.id);
+    });
+  });
+};
 
-function addCart(id){
-    alert(`Agregado ${productos[id].nombre} al carrito de compras`)
-    total = total + productos[id].precio
-    totalItems = totalItems+1
+//Funcion de Compras 
+function addCart(id) {
+  alert(`Agregado ${productos[id].nombre} al carrito de compras`);
+  total = total + productos[id].precio;
+  totalItems = totalItems +1;
+  carritoItems.push(id)
+  console.log(carritoItems)
+  refreshCart();
+  let shopItem = document.createElement("div");
+  shopItem.className = "shopItem";
+  shopItem.innerHTML = `<img class="cartImage" src="./assets/img/img${[id]}.JPG">
+    <p>${productos[id].nombre} /$ ${productos[id].precio}</p>  
+    <button id="trashButton${productos[id].id}" class="delete-btn">
+    Borrar</button>`;
+  carrito.appendChild(shopItem);
+
+  //funcion eliminar
+  let deletebutton = document.getElementById(`trashButton${id}`)
+  deletebutton.addEventListener("click", () => {
+    carrito.removeChild(shopItem);
+    let itemId = carritoItems.indexOf(id)
+    console.log(itemId)
+    totalItems = totalItems - 1 ;
+    total = total - productos[id].precio;
+    carritoItems.splice(itemId , 1)
+    console.log(carritoItems)
     refreshCart();
-    alert(`total ${total}`)
-    const div = document.createElement("div");
-    div.className = "shopItem";
-    div.innerHTML = `<p>${ productos[id].nombre} /$ ${ productos[id].precio}</p>  <button id="delete${productos[id].id}" class="delete-btn">X</button>`    
-    carrito.appendChild(div);
-
+  });
 }
 
-function refreshCart(){
-    cartShower.innerHTML = `$${total}<br>
-    ${totalItems} items en el carrito`
+//Funcion que refrezca barra de tareas (carrito)
+function refreshCart() {
+  cartShower.innerHTML = `$${total}<br>
+    ${totalItems} items en el carrito`;
 }
 
-
-
-let total = 0
-let totalItems = 0
-let cart = document.getElementById('cart')
+//inicializadores
+let total = 0;
+let totalItems = 0;
+//array donde se almacena el array de indices de productos seleccionados.
+let carritoItems = []
+let cart = document.getElementById("cart");
 let cartShower = document.createElement("div");
 cartShower.className = "cartShower";
 cartShower.innerHTML = `$${total}<br>
-                         ${totalItems} items en el carrito`
-cart.append(cartShower)
+                         ${totalItems} items en el carrito`;
+cart.append(cartShower);
+
 articleGenerator(productos);
-const carrito = document.getElementById("carrito-contenedor")
+const carrito = document.getElementById("carrito-contenedor");
