@@ -4,6 +4,7 @@ const articleGenerator = (productos) => {
   const contenedor = document.getElementById("cardContainer");
   productos.forEach((producto) => {
     const div = document.createElement("div");
+
     div.className = "cards";
     div.innerHTML = `<h4 class="cardtitle">${producto.nombre}</h4>
                         <img src="./assets/img/img${producto.id}.jpg" class="card-img">
@@ -24,8 +25,9 @@ const articleGenerator = (productos) => {
 };
 
 //Funcion de Compras 
+
 function addCart(id) {
-  alert(`Agregado ${productos[id].nombre} al carrito de compras`);
+
   total = total + productos[id].precio;
   totalItems = totalItems +1;
   carritoItems.push(id)
@@ -38,8 +40,10 @@ function addCart(id) {
     <button id="trashButton${productos[id].id}" class="delete-btn">
     Borrar</button>`;
   carrito.appendChild(shopItem);
+  
 
   //funcion eliminar
+
   let deletebutton = document.getElementById(`trashButton${id}`)
   deletebutton.addEventListener("click", () => {
     carrito.removeChild(shopItem);
@@ -54,22 +58,51 @@ function addCart(id) {
 }
 
 //Funcion que refrezca barra de tareas (carrito)
+
 function refreshCart() {
   cartShower.innerHTML = `$${total}<br>
     ${totalItems} items en el carrito`;
+    carritoStorage =  localStorage.getItem("storage");
+    localStorage.setItem("storage", JSON.stringify(carritoItems));
+    carritoStorage =  localStorage.getItem("storage");
 }
 
 //inicializadores
+
+let carritoStorage =  localStorage.getItem("storage");
 let total = 0;
 let totalItems = 0;
-//array donde se almacena el array de indices de productos seleccionados.
 let carritoItems = []
+
 let cart = document.getElementById("cart");
 let cartShower = document.createElement("div");
 cartShower.className = "cartShower";
+//Total y Cantidad de items
 cartShower.innerHTML = `$${total}<br>
                          ${totalItems} items en el carrito`;
 cart.append(cartShower);
 
 articleGenerator(productos);
-const carrito = document.getElementById("carrito-contenedor");
+
+//carrito de compras
+const carrito = document.getElementById("cartContainer");
+const cartIcon = document.getElementById("cartIcon");
+cartIcon.addEventListener("click", () => {
+  if(carrito.classList == 'display-none'){
+  carrito.classList.replace('display-none','cartContainer');
+  shopItem.classList.replace('display-none','shopItem');
+}
+else{
+  carrito.classList.replace('cartContainer','display-none');
+  shopItem.classList.replace('shopItem','display-none');
+}})
+
+//Inicializador de carrito con LocalStorage
+
+window.addEventListener('DOMContentLoaded', ()=>{
+  if(localStorage.getItem('carritoStorage')){
+    let array = JSON.parse(carritoStorage)
+    array.forEach((id) => {
+      addCart(id)
+    })}
+})

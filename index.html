@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="fontawesome-all.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="sweetalert2.arr.min.js">
 </head>
 <body>
     <div class="headingbar">
@@ -32,8 +33,6 @@
         </div>
     </div>
     <main>
-        <div id="carrito-contenedor" class="carrito-contenedor">
-        </div>
         <div class="container">
             <form class="filters" id="filters">
                <div  class="filters-items"><label for="Electronica/Gaming">Electronica/Gaming</label><input type="checkbox" class="check" name="Electronica/Gaming" id="1" checked></div>
@@ -45,7 +44,13 @@
                 <!-- las cards van aqui -->
             </div>
         </div>
+        <div id="cartContainer" class="display-none">
+            <div class="cart-resumen" id="cartResumen">
+                <p>Los productos Seleccionados son los siguientes</p>
+            </div>
+            <p>El total de su compra es de <span></span> </p>
 
+        </div>
     </main>
     <footer>
         <p>Hecho con fines educativos para coderhouse</p>
