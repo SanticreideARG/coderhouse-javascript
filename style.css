@@ -82,10 +82,13 @@ body {
 }
 .cartImage{
     width: 60px;
-    margin-right: 25px;
-    border-right: 1px solid #000000;
+    border-radius: 4px;
+    margin: 6px;
+    border: 1px solid #000000;
 }
-
+.cartImage:hover{
+    width: 62px
+}
 .btn {
     font-family: 'Anek Malayalam', sans-serif;
     font-size: 17px;
@@ -132,10 +135,10 @@ body {
     text-align: center;
     box-shadow: 2px 3px 3px 2px #222222;
     display: grid;
-    grid-template-rows: 1fr 3fr 1fr 1fr 3fr 1fr;
+    grid-template-rows: 1fr 3fr 1fr 1fr 2fr 1fr;
 
 }
-
+        
 .side-container {
     display: grid;
     grid-template-columns: 50% 50%;
@@ -144,8 +147,8 @@ body {
 .cardContainer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    padding: 10px 0;
-    margin-top: 90px;
+    padding: 4px 0;
+    margin-top: 20px;
 
 }
 
@@ -192,7 +195,7 @@ body {
 .filters{
     display: flex;
     justify-content: space-around;
-    background-color: #a0ff83;
+    background-color: #72f14c;
     border-bottom: 1px solid #000000;
     box-shadow: 2px 3px 3px 2px #222222;
     border-radius: 0 0 4px 4px;
@@ -222,24 +225,24 @@ footer {
     padding: 0;
 }
 .shopItem{
-    background-color: #29ca52;
-    font-family: 'Anek Malayalam';
+    background-color: #91fc87;
+    font-family: 'Roboto', sans-serif;
     font-size: 22px;
-    color: #1b1b1b;
+    color: #000000;
     border: 1px solid #1b1b1b;
-    border-radius: 4px;
-    margin: 0;
+    border-radius: 8px;
+    margin: 3px 0;
     display: flex;
     width: 98%;
     align-items: center;
-
 }
+
 .delete-btn{
     
     font-family: 'Anek Malayalam', sans-serif;
     font-size: 18px;
-    background-color: #ff5757;
-    padding: 7px 5px;
+    background-color: #f71b1b;
+    padding: 9px 5px;
     border: 1px solid black;
     border-radius: 4px;
     margin-left: 25px;
@@ -253,16 +256,19 @@ footer {
 .cartContainer{
    border: 1px solid black;
    position: fixed;
+   border-radius: 10px;
    top: 5%;
    left: 5%;
    width: 90%;
    height: 90vh;
    background: rgb(72, 255, 0);
-   background: linear-gradient(90deg, rgb(72, 255, 0) 0%, rgb(208, 255, 0) 100%);
+   background: linear-gradient(90deg, rgb(92, 255, 14) 0%, rgb(112, 255, 14) 0% 100%);
    padding: 5px;
    transition: all 0.5s ease-in;
 }
-
+.cartContainer p{
+    padding: 15px;
+}
 
 /* mediaquerries */
 
@@ -304,11 +310,11 @@ footer {
     }
 
     .cards {
-        grid-template-rows: 0.4fr 0.8fr 0.4fr 0.4fr 1.3fr 0.3fr;
+        grid-template-rows: 0.4fr 0.8fr 0.4fr 0.4fr 1.1fr 0.3fr;
     }
 
     .btn {
-        margin-top: 10px;
+        margin-top: 2px;
     }
     .filters {
         display: grid;

@@ -1,8 +1,8 @@
 //Renderizador de Tarjetas
-
 const articleGenerator = (productos) => {
   const contenedor = document.getElementById("cardContainer");
   productos.forEach((producto) => {
+   
     const div = document.createElement("div");
 
     div.className = "cards";
@@ -27,20 +27,25 @@ const articleGenerator = (productos) => {
 //Funcion de Compras 
 
 function addCart(id) {
+  const itemRender = ()=>{
+    let producto = productos.find( producto => producto.id == id)
+    console.log(producto)
 
+    carritoItems.push(producto)
+    producto.cantidad = 1
+    }
+  itemRender()
   total = total + productos[id].precio;
   totalItems = totalItems +1;
-  carritoItems.push(id)
-  console.log(carritoItems)
+  carritoItemsStorage.push(id)
   refreshCart();
   let shopItem = document.createElement("div");
   shopItem.className = "shopItem";
   shopItem.innerHTML = `<img class="cartImage" src="./assets/img/img${[id]}.JPG">
-    <p>${productos[id].nombre} /$ ${productos[id].precio}</p>  
+    <p>${productos[id].nombre}<br> <bold>$  ${productos[id].precio}</bold></p>  
     <button id="trashButton${productos[id].id}" class="delete-btn">
-    Borrar</button>`;
+    Borrar Item</button>`;
   carrito.appendChild(shopItem);
-  
 
   //funcion eliminar
 
@@ -48,11 +53,10 @@ function addCart(id) {
   deletebutton.addEventListener("click", () => {
     carrito.removeChild(shopItem);
     let itemId = carritoItems.indexOf(id)
-    console.log(itemId)
     totalItems = totalItems - 1 ;
     total = total - productos[id].precio;
     carritoItems.splice(itemId , 1)
-    console.log(carritoItems)
+    carritoItemsStorage.splice(itemId , 1)
     refreshCart();
   });
 }
@@ -63,7 +67,7 @@ function refreshCart() {
   cartShower.innerHTML = `$${total}<br>
     ${totalItems} items en el carrito`;
     carritoStorage =  localStorage.getItem("storage");
-    localStorage.setItem("storage", JSON.stringify(carritoItems));
+    localStorage.setItem("storage", JSON.stringify(carritoItemsStorage));
     carritoStorage =  localStorage.getItem("storage");
 }
 
@@ -73,6 +77,7 @@ let carritoStorage =  localStorage.getItem("storage");
 let total = 0;
 let totalItems = 0;
 let carritoItems = []
+let carritoItemsStorage = []
 
 let cart = document.getElementById("cart");
 let cartShower = document.createElement("div");
@@ -88,21 +93,16 @@ articleGenerator(productos);
 const carrito = document.getElementById("cartContainer");
 const cartIcon = document.getElementById("cartIcon");
 cartIcon.addEventListener("click", () => {
-  if(carrito.classList == 'display-none'){
-  carrito.classList.replace('display-none','cartContainer');
-  shopItem.classList.replace('display-none','shopItem');
-}
-else{
-  carrito.classList.replace('cartContainer','display-none');
-  shopItem.classList.replace('shopItem','display-none');
-}})
-
+  carrito.classList == 'display-none' ? 
+   carrito.classList.replace('display-none','cartContainer') :
+   carrito.classList.replace('cartContainer','display-none') 
+})
 //Inicializador de carrito con LocalStorage
 
 window.addEventListener('DOMContentLoaded', ()=>{
-  if(localStorage.getItem('carritoStorage')){
-    let array = JSON.parse(carritoStorage)
+  if(localStorage.getItem('storage')){
+    let array = JSON.parse(storage)
     array.forEach((id) => {
-      addCart(id)
+      addCart(id);
     })}
 })

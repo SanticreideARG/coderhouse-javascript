@@ -10,6 +10,7 @@ const productos = [
   },
   {
     id: 1,
+    cantidad: 0,
     nombre: "Maquina Cortar Pelo Groom Pro 21 Piezas Wahl",
     precio: 9690,
     categoria: "Belleza y Cuidado Personal",
@@ -18,6 +19,7 @@ const productos = [
   },
   {
     id: 2,
+    cantidad: 0,
     nombre: "Diesel Spirit of The Brave Eau De Toilette 125 Ml",
     precio: 17919,
     categoria: "Belleza y Cuidado Personal",
@@ -26,6 +28,7 @@ const productos = [
   },
   {
     id: 3,
+    cantidad: 0,
     nombre: "Phillips One Blade Afeitadora Recortadora",
     precio: 4996,
     categoria: "Belleza y Cuidado Personal",
@@ -34,6 +37,7 @@ const productos = [
   },
   {
     id: 4,
+    cantidad: 0,
     nombre: "Kit Serums Regina Dia & Noche",
     precio: 3465,
     categoria: "Belleza y Cuidado Personal",
@@ -42,6 +46,7 @@ const productos = [
   },
   {
     id: 5,
+    cantidad: 0,
     nombre: "Tommy Hilfiger Impact Edt 100 Ml",
     precio: 18144,
     categoria: "Belleza y Cuidado Personal",
@@ -50,6 +55,7 @@ const productos = [
   },
   {
     id: 6,
+    cantidad: 0,
     nombre: "Afeitadora Remingtton Pf7200 Comfort Series",
     precio: 5391,
     categoria: "Belleza y Cuidado Personal",
@@ -58,6 +64,7 @@ const productos = [
   },
   {
     id: 7,
+    cantidad: 0,
     nombre: "Perfume Tommy Hilfiger Men Now Eddt 100 Ml",
     precio: 13080,
     categoria: "Belleza y Cuidado Personal",
@@ -66,6 +73,7 @@ const productos = [
   },
   {
     id: 8,
+    cantidad: 0,
     nombre: "Mascara de Pestañas Mac Natural Flirt Set",
     precio: 34650,
     categoria: "Belleza y Cuidado Personal",
@@ -74,6 +82,7 @@ const productos = [
   },
   {
     id: 9,
+    cantidad: 0,
     nombre: "Smart TV Teedge Teled 32FH6 LED",
     precio: 39000,
     categoria: "Electronica/Gaming",
@@ -82,6 +91,7 @@ const productos = [
   },
   {
     id: 10,
+    cantidad: 0,
     nombre: "Auriculares Inalambricos Sony WH CH510",
     precio: 8999,
     categoria: "Electronica/Gaming",
@@ -90,6 +100,7 @@ const productos = [
   },
   {
     id: 11,
+    cantidad: 0,
     nombre: "Auriculares Inalabricos JBL T230 Tws",
     precio: 19499,
     categoria: "Electronica/Gaming",
@@ -98,6 +109,7 @@ const productos = [
   },
   {
     id: 12,
+    cantidad: 0,
     nombre: "Parlante JBL Go 2 Deep Sea Blue ",
     precio: 6896,
     categoria: "Electronica/Gaming",
@@ -106,6 +118,7 @@ const productos = [
   },
   {
     id: 13,
+    cantidad: 0,
     nombre: "Parlante Philco DJP10 Portatil Bluetooth",
     precio: 13650,
     categoria: "Electronica/Gaming",
@@ -114,6 +127,7 @@ const productos = [
   },
   {
     id: 14,
+    cantidad: 0,
     nombre: "Microsoft Xbox Series S 512GB Standard",
     precio: 124999,
     categoria: "Electronica/Gaming",
@@ -122,6 +136,7 @@ const productos = [
   },
   {
     id: 15,
+    cantidad: 0,
     nombre: "Nintendo Switch 32GB Standard",
     precio: 125537,
     categoria: "Electronica/Gaming",
@@ -130,6 +145,7 @@ const productos = [
   },
   {
     id: 16,
+    cantidad: 0,
     nombre: "Microsoft Xbox Series X 1TB Standard",
     precio: 199999,
     categoria: "Electronica/Gaming",
@@ -138,6 +154,7 @@ const productos = [
   },
   {
     id: 17,
+    cantidad: 0,
     nombre: "Joystick Ps5 Dualsense Cosmic Red",
     precio: 32760,
     categoria: "Electronica/Gaming",
@@ -146,6 +163,7 @@ const productos = [
   },
   {
     id: 18,
+    cantidad: 0,
     nombre: "Sony Playstation 5 825GB Standard",
     precio: 288599,
     categoria: "Electronica/Gaming",
@@ -154,6 +172,7 @@ const productos = [
   },
   {
     id: 19,
+    cantidad: 0,
     nombre: "Nintendo Switch Oled 64gb Standard",
     precio: 178199,
     categoria: "Electronica/Gaming",
@@ -162,6 +181,7 @@ const productos = [
   },
   {
     id: 20,
+    cantidad: 0,
     nombre: "Perfume Boos Black Intense 90 Ml",
     precio: 5961,
     categoria: "Belleza y Cuidado Personal",
@@ -170,6 +190,7 @@ const productos = [
   },
   {
     id: 21,
+    cantidad: 0,
     nombre: "Aspiradora Trapeadora Liectroux C30B",
     precio: 67449,
     categoria: "Electrodomesticos",
@@ -178,6 +199,7 @@ const productos = [
   },
   {
     id: 22,
+    cantidad: 0,
     nombre: "Heladera Samsung RT38K5932",
     precio: 214999,
     categoria: "Electrodomesticos",
@@ -186,6 +208,7 @@ const productos = [
   },
   {
     id: 23,
+    cantidad: 0,
     nombre: "Lavarropas Whirpool WNQ06A 6kg",
     precio: 106599,
     categoria: "Electrodomesticos",
@@ -194,6 +217,7 @@ const productos = [
   },
   {
     id: 24,
+    cantidad: 0,
     nombre: "Aire Acondicionado Philco 2236 frigorias",
     precio: 99299,
     categoria: "Electrodomesticos",
@@ -202,6 +226,7 @@ const productos = [
   },
   {
     id: 25,
+    cantidad: 0,
     nombre: "Cafetera Nescafe Moulinex Dolce Gusto S Plus",
     precio: 39790,
     categoria: "Electrodomesticos",
@@ -210,6 +235,7 @@ const productos = [
   },
   {
     id: 26,
+    cantidad: 0,
     nombre: "Smart TV Teedge Teled 42FH6 LED",
     precio: 59999,
     categoria: "Electronica/Gaming",
@@ -218,6 +244,7 @@ const productos = [
   },
   {
     id: 27,
+    cantidad: 0,
     nombre: "Auriculares Inalambricos Marshall Major IV",
     precio: 39999,
     categoria: "Electronica/Gaming",
@@ -226,6 +253,7 @@ const productos = [
   },
   {
     id: 28,
+    cantidad: 0,
     nombre: "Smart TV Teedge Teled 32FH6 LED",
     precio: 43999,
     categoria: "Electronica/Gaming",
@@ -234,6 +262,7 @@ const productos = [
   },
   {
     id: 29,
+    cantidad: 0,
     nombre: "Kit Streaming Microfono celular Tripode Luz",
     precio: 6879,
     categoria: "Electronica/Gaming",
@@ -242,6 +271,7 @@ const productos = [
   },
   {
     id: 30,
+    cantidad: 0,
     nombre: "Bicicleta MTB Topmega Armor R29",
     precio: 48879,
     categoria: "Deportes",
@@ -250,6 +280,7 @@ const productos = [
   },
   {
     id: 31,
+    cantidad: 0,
     nombre: "Cinta de Correr Reebok Jet 200+",
     precio: 349999,
     categoria: "Deportes",
@@ -258,6 +289,7 @@ const productos = [
   },
   {
     id: 32,
+    cantidad: 0,
     nombre: "Multigimnasio Randers Multigym ",
     precio: 226793,
     categoria: "Deportes",
@@ -266,6 +298,7 @@ const productos = [
   },
   {
     id: 33,
+    cantidad: 0,
     nombre: "Cinta de correr electrica World Fitness Dh695",
     precio: 449999,
     categoria: "Deportes",
@@ -274,6 +307,7 @@ const productos = [
   },
   {
     id: 34,
+    cantidad: 0,
     nombre: "Bicicleta Venzo Loki Evo R29",
     precio: 116300,
     categoria: "Deportes",
@@ -282,6 +316,7 @@ const productos = [
   },
   {
     id: 35,
+    cantidad: 0,
     nombre: "Barra Body Pump + 2 Mancuernas + 24 kg Kit Set",
     precio: 17602,
     categoria: "Deportes",
