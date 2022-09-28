@@ -29,8 +29,6 @@ const articleGenerator = (productos) => {
 function addCart(id) {
   const itemRender = ()=>{
     let producto = productos.find( producto => producto.id == id)
-    console.log(producto)
-
     carritoItems.push(producto)
     producto.cantidad = 1
     }
@@ -46,6 +44,28 @@ function addCart(id) {
     <button id="trashButton${productos[id].id}" class="delete-btn">
     Borrar Item</button>`;
   carrito.appendChild(shopItem);
+  Swal.fire({
+    icon: 'sucess',
+    title: `Agregado ${productos[id].nombre} al carrito`,
+    imageUrl: `./assets/img/img${[id]}.JPG`,
+    imageWidth: 200,
+    imageHeight: 200,
+    footer: 'Sigue buscando las mejores ofertas!'
+  });
+  Toastify({
+    text: `Agregado ${productos[id].nombre} al carrito`,
+    duration: 3000,
+    newWindow: true,
+    close: true,
+    gravity: "top",
+    position: "right",
+    stopOnFocus: true,
+    style: {
+      background: "linear-gradient(to right, #48ff00, #d0ff00)",
+    },
+    onClick: function(){} 
+  }).showToast();
+
 
   //funcion eliminar
 
@@ -72,7 +92,7 @@ function refreshCart() {
 }
 
 //inicializadores
-
+Swal.fire('Bienvenido a Lime Shop. Recuerda que este es un sitio hecho con fines educativos y que los precios y productos que veas no corresponden con articulos reales a la venta');
 let carritoStorage =  localStorage.getItem("storage");
 let total = 0;
 let totalItems = 0;
@@ -102,6 +122,7 @@ cartIcon.addEventListener("click", () => {
 window.addEventListener('DOMContentLoaded', ()=>{
   if(localStorage.getItem('storage')){
     let array = JSON.parse(storage)
+
     array.forEach((id) => {
       addCart(id);
     })}
