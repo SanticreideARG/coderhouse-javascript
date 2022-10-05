@@ -42,7 +42,9 @@ function addCart(id) {
   shopItem.innerHTML = `<img class="cartImage" src="./assets/img/img${[id]}.JPG">
     <p>${productos[id].nombre}<br> <bold>$  ${productos[id].precio}</bold></p>  
     <button id="trashButton${productos[id].id}" class="delete-btn">
-    Borrar Item</button>`;
+    Borrar Item<span class="material-icons">
+    delete
+    </span></button>`;
   carrito.appendChild(shopItem);
   Swal.fire({
     icon: 'sucess',
